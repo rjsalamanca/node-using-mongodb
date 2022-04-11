@@ -4,7 +4,8 @@ import mongoose from 'mongoose';
 
 const app = express();
 const PORT = 4000;
-mongoose.connect('mongodb://localhost:27017/productsdb');
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhos/productsdb');
 
 // bodyparser setup
 app.use(bodyParser.urlencoded({ extended: true }));
